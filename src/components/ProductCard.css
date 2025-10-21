@@ -58,39 +58,6 @@
   height: 1rem;
 }
 
-.favorite-btn {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: rgba(255, 255, 255, 0.9);
-  border: none;
-  border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.favorite-btn:hover {
-  background: white;
-  transform: scale(1.1);
-}
-
-.favorite-btn.active .heart-icon {
-  color: #e74c3c;
-  fill: #e74c3c;
-}
-
-.heart-icon {
-  width: 1.25rem;
-  height: 1.25rem;
-  color: #7f8c8d;
-  transition: all 0.3s ease;
-}
-
 .out-of-stock-badge {
   position: absolute;
   bottom: 1rem;

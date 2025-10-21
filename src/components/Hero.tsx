@@ -30,8 +30,7 @@ const Hero: React.FC = () => {
             </div>
           </div>
           <div className="hero-actions">
-            <button className="btn-primary">Ver Productos</button>
-            <button className="btn-secondary">Saber Más</button>
+            <a href="#products" className="btn-primary">Ver Productos</a>
           </div>
         </div>
         <div className="hero-image">

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShoppingCart, Heart, Zap } from 'lucide-react';
+import { ShoppingCart, Zap } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import CartSidebar from './CartSidebar';
 import './Header.css';
@@ -29,14 +29,9 @@ const Header: React.FC = () => {
           <nav className="nav">
             <a href="#home" className="nav-link">Inicio</a>
             <a href="#products" className="nav-link">Productos</a>
-            <a href="#about" className="nav-link">Nosotros</a>
-            <a href="#contact" className="nav-link">Contacto</a>
           </nav>
 
           <div className="header-actions">
-            <button className="action-btn">
-              <Heart className="icon" />
-            </button>
             <button className="action-btn" onClick={handleCartClick}>
               <ShoppingCart className="icon" />
               {totalItems > 0 && <span className="cart-count">{totalItems}</span>}

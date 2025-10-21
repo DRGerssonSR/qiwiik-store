@@ -7,7 +7,6 @@ import { useCart } from '../context/CartContext';
 import './ProductGrid.css';
 
 const ProductGrid: React.FC = () => {
-  const [, setFavorites] = useState<string[]>([]);
   const { addToCart } = useCart();
   const [notification, setNotification] = useState<{ message: string; isVisible: boolean }>({
     message: '',
@@ -24,14 +23,6 @@ const ProductGrid: React.FC = () => {
 
   const handleCloseNotification = () => {
     setNotification(prev => ({ ...prev, isVisible: false }));
-  };
-
-  const handleToggleFavorite = (productId: string) => {
-    setFavorites(prev => 
-      prev.includes(productId) 
-        ? prev.filter(id => id !== productId)
-        : [...prev, productId]
-    );
   };
 
   return (
@@ -51,7 +42,6 @@ const ProductGrid: React.FC = () => {
                 key={product.id}
                 product={product}
                 onAddToCart={handleAddToCart}
-                onToggleFavorite={handleToggleFavorite}
               />
             ))}
           </div>

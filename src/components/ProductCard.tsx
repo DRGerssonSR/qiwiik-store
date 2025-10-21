@@ -1,25 +1,17 @@
-import React, { useState } from 'react';
-import { ShoppingCart, Heart, Star, Zap } from 'lucide-react';
+import React from 'react';
+import { ShoppingCart, Star, Zap } from 'lucide-react';
 import type { Product } from '../types/Product';
 import './ProductCard.css';
 
 interface ProductCardProps {
   product: Product;
   onAddToCart: (product: Product) => void;
-  onToggleFavorite: (productId: string) => void;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ 
   product, 
-  onAddToCart, 
-  onToggleFavorite 
+  onAddToCart
 }) => {
-  const [isFavorite, setIsFavorite] = useState(false);
-
-  const handleFavoriteClick = () => {
-    setIsFavorite(!isFavorite);
-    onToggleFavorite(product.id);
-  };
 
   const getCategoryIcon = () => {
     return <Zap className="category-icon" />;
@@ -42,12 +34,6 @@ const ProductCard: React.FC<ProductCardProps> = ({
           {getCategoryIcon()}
           <span>{product.category}</span>
         </div>
-        <button 
-          className={`favorite-btn ${isFavorite ? 'active' : ''}`}
-          onClick={handleFavoriteClick}
-        >
-          <Heart className="heart-icon" />
-        </button>
         {!product.inStock && (
           <div className="out-of-stock-badge">Agotado</div>
         )}
