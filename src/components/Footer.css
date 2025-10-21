@@ -1,5 +1,5 @@
 .footer {
-  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  background: linear-gradient(135deg, var(--color-neutral) 0%, var(--color-primary) 100%);
   color: white;
   padding: 3rem 0 1rem;
 }
@@ -34,11 +34,11 @@
 .logo-icon {
   width: 2rem;
   height: 2rem;
-  color: #ffd700;
+  color: var(--color-highlight);
 }
 
 .logo-text {
-  background: linear-gradient(45deg, #ffd700, #ffed4e);
+  background: linear-gradient(45deg, var(--color-highlight), var(--color-accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -62,14 +62,14 @@
 }
 
 .social-link:hover {
-  color: #ffd700;
+  color: var(--color-highlight);
 }
 
 .footer-title {
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: #ffd700;
+  color: var(--color-highlight);
 }
 
 .footer-links {
@@ -108,11 +108,11 @@
 .contact-icon {
   width: 1.25rem;
   height: 1.25rem;
-  color: #ffd700;
+  color: var(--color-highlight);
 }
 
 .footer-bottom {
-  border-top: 1px solid #34495e;
+  border-top: 1px solid var(--color-primary);
   padding-top: 1.5rem;
   display: flex;
   justify-content: space-between;

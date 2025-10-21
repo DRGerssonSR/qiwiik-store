@@ -28,7 +28,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
   color: white;
 }
 
@@ -97,7 +97,7 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: #2c3e50;
+  color: var(--color-neutral);
 }
 
 .empty-cart span {
@@ -118,7 +118,7 @@
   border: 1px solid #e0e0e0;
   border-radius: 10px;
   margin-bottom: 1rem;
-  background: #f8f9fa;
+  background: var(--color-background);
 }
 
 .item-image {
@@ -128,7 +128,7 @@
 .product-placeholder {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -148,7 +148,7 @@
 .item-name {
   font-size: 0.95rem;
   font-weight: 600;
-  color: #2c3e50;
+  color: var(--color-neutral);
   margin: 0;
   line-height: 1.3;
 }
@@ -156,7 +156,7 @@
 .item-price {
   font-size: 1rem;
   font-weight: 700;
-  color: #667eea;
+  color: var(--color-primary);
   margin: 0;
 }
 
@@ -182,18 +182,18 @@
 
 .quantity-btn:hover {
   background: #f0f0f0;
-  border-color: #667eea;
+  border-color: var(--color-primary);
 }
 
 .quantity-icon {
   width: 0.875rem;
   height: 0.875rem;
-  color: #667eea;
+  color: var(--color-primary);
 }
 
 .quantity {
   font-weight: 600;
-  color: #2c3e50;
+  color: var(--color-neutral);
   min-width: 20px;
   text-align: center;
 }
@@ -228,7 +228,7 @@
 .cart-summary {
   padding: 1rem;
   border-top: 1px solid #e0e0e0;
-  background: #f8f9fa;
+  background: var(--color-background);
 }
 
 .summary-row {
@@ -241,7 +241,7 @@
 .summary-row.total {
   font-weight: 700;
   font-size: 1.1rem;
-  color: #2c3e50;
+  color: var(--color-neutral);
   border-top: 1px solid #ddd;
   padding-top: 0.5rem;
   margin-top: 0.5rem;
@@ -256,7 +256,7 @@
 }
 
 .checkout-btn {
-  background: linear-gradient(45deg, #27ae60, #2ecc71);
+  background: linear-gradient(45deg, var(--color-secondary), var(--color-accent));
   color: white;
   border: none;
   padding: 1rem;
@@ -273,7 +273,7 @@
 
 .checkout-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(39, 174, 96, 0.4);
+  box-shadow: 0 5px 15px rgba(106, 155, 77, 0.4);
 }
 
 .checkout-icon {

@@ -1,6 +1,6 @@
 .product-grid-section {
   padding: 4rem 0;
-  background: #f8f9fa;
+  background: var(--color-background);
 }
 
 .container {
@@ -17,9 +17,9 @@
 .section-title {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #2c3e50;
+  color: var(--color-neutral);
   margin-bottom: 1rem;
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
