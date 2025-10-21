@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { ShoppingCart, Zap } from 'lucide-react';
-import { useCart } from '../context/CartContext';
-import CartSidebar from './CartSidebar';
-import './Header.css';
+import React, { useState } from "react";
+import { ShoppingCart } from "lucide-react";
+import { useCart } from "../context/CartContext";
+import CartSidebar from "./CartSidebar";
+import "./Header.css";
 
 const Header: React.FC = () => {
   const { getTotalItems } = useCart();
@@ -22,24 +22,29 @@ const Header: React.FC = () => {
       <header className="header">
         <div className="container">
           <div className="logo">
-            <Zap className="logo-icon" />
-            <span className="logo-text">Qiwiik</span>
+            <img src="/logo.jpg" alt="Qiwiik Logo" className="logo-image" />
           </div>
-          
+
           <nav className="nav">
-            <a href="#home" className="nav-link">Inicio</a>
-            <a href="#products" className="nav-link">Productos</a>
+            <a href="#home" className="nav-link">
+              Inicio
+            </a>
+            <a href="#products" className="nav-link">
+              Productos
+            </a>
           </nav>
 
           <div className="header-actions">
             <button className="action-btn" onClick={handleCartClick}>
               <ShoppingCart className="icon" />
-              {totalItems > 0 && <span className="cart-count">{totalItems}</span>}
+              {totalItems > 0 && (
+                <span className="cart-count">{totalItems}</span>
+              )}
             </button>
           </div>
         </div>
       </header>
-      
+
       <CartSidebar isOpen={isCartOpen} onClose={handleCloseCart} />
     </>
   );
